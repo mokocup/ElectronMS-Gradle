@@ -20,7 +20,6 @@ import client.ItemInventory.Inventory.MapleInventory;
 import client.ItemInventory.Inventory.MapleInventoryType;
 import client.ItemInventory.ItemPotential.MapleItempotMain;
 import client.Skills.SkillFactory;
-import com.sun.security.ntlm.Server;
 import constants.GameConstants;
 import constants.ServerConstants;
 import connections.Database.MYSQL;
@@ -63,7 +62,7 @@ public class CharLoginHandler {
         }
         switch (checkId) {
                 case 0:
-                    //»ý¼º °¡´ÉÇÑ ¾ÆÀÌµðÀÏ¶§
+                    //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ìµï¿½ï¿½Ï¶ï¿½
                     if (canjoin == 1) {
                         if(ServerConstants.AUTO_REGISTER) {
                             AutoRegister.registerAccount(c, login, pwd);
@@ -151,7 +150,7 @@ public class CharLoginHandler {
         
         c.setWorld(server);
         c.setChannel(channel);
-        System.out.println("[Notice] " + c.getSessionIPAddress() + " in " + c.getAccountName() + " Into account " + (channel == 0 ? 1 : channel == 1 ? "20¼¼ÀÌ»ó" : channel) + " Attempting to connect to channel.");
+        System.out.println("[Notice] " + c.getSessionIPAddress() + " in " + c.getAccountName() + " Into account " + (channel == 0 ? 1 : channel == 1 ? "20ï¿½ï¿½ï¿½Ì»ï¿½" : channel) + " Attempting to connect to channel.");
         LoginServer.getInstance().ip.add(c.getSessionIPAddress());
         try {
             List<MapleCharacter> chars = c.loadCharacters();
@@ -241,7 +240,7 @@ public class CharLoginHandler {
 
 
     public static void getLoginRequest(ReadingMaple rh, MapleClient c) {
-        /* ·Î±×ÀÎ ½ÃÀÛ */
+        /* ï¿½Î±ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ */
         c.getSession().writeAndFlush(MainPacketCreator.serverMessage(""));
         short webStart = rh.readShort();
         if (webStart == 1) {
@@ -493,74 +492,74 @@ public class CharLoginHandler {
                 newchar.changeSkillLevel(SkillFactory.getSkill(30001068), (byte) 1, (byte) 1);
                 break;
             case Cygnus: //Cygnus
-                newchar.changeSkillLevel(SkillFactory.getSkill(10001003), (byte) 1, (byte) 1); // ÀåÀÎÀÇ È¥
-                newchar.changeSkillLevel(SkillFactory.getSkill(10001244), (byte) 1, (byte) 1); // ¿¤¸®¸àÅ» ½½·¡½Ã
-                newchar.changeSkillLevel(SkillFactory.getSkill(10001245), (byte) 1, (byte) 1); // Á®´Ï È¨
-                newchar.changeSkillLevel(SkillFactory.getSkill(10000246), (byte) 1, (byte) 1); // ¿¤¸®¸àÅ» ÇÏ¸ð´Ï
-                newchar.changeSkillLevel(SkillFactory.getSkill(10000252), (byte) 1, (byte) 1); // ¿¤¸®¸àÅ» ½¬ÇÁÆ®
+                newchar.changeSkillLevel(SkillFactory.getSkill(10001003), (byte) 1, (byte) 1); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È¥
+                newchar.changeSkillLevel(SkillFactory.getSkill(10001244), (byte) 1, (byte) 1); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å» ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+                newchar.changeSkillLevel(SkillFactory.getSkill(10001245), (byte) 1, (byte) 1); // ï¿½ï¿½ï¿½ï¿½ È¨
+                newchar.changeSkillLevel(SkillFactory.getSkill(10000246), (byte) 1, (byte) 1); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å» ï¿½Ï¸ï¿½ï¿½
+                newchar.changeSkillLevel(SkillFactory.getSkill(10000252), (byte) 1, (byte) 1); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å» ï¿½ï¿½ï¿½ï¿½Æ®
                 break;
-            case Aran: //¾Æ¶õ
-                newchar.changeSkillLevel(SkillFactory.getSkill(20001295), (byte) 1, (byte) 1); //ÄÄ¹î ½ºÅÇ
+            case Aran: //ï¿½Æ¶ï¿½
+                newchar.changeSkillLevel(SkillFactory.getSkill(20001295), (byte) 1, (byte) 1); //ï¿½Ä¹ï¿½ ï¿½ï¿½ï¿½ï¿½
                 break;
-            case Mercedes: //¸Þ¸£¼¼µ¥½º
-                newchar.changeSkillLevel(SkillFactory.getSkill(20020109), (byte) 1, (byte) 1); // ¿¤ÇÁÀÇ È¸º¹
-                newchar.changeSkillLevel(SkillFactory.getSkill(20021110), (byte) 1, (byte) 1); // ¿¤ÇÁÀÇ Ãàº¹
-                newchar.changeSkillLevel(SkillFactory.getSkill(20020111), (byte) 1, (byte) 1); // ½ºÅ¸ÀÏ¸®½¬ ¹«ºê
-                newchar.changeSkillLevel(SkillFactory.getSkill(20020112), (byte) 1, (byte) 1); // ¿ÕÀÇ ÀÚ°Ý
+            case Mercedes: //ï¿½Þ¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+                newchar.changeSkillLevel(SkillFactory.getSkill(20020109), (byte) 1, (byte) 1); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È¸ï¿½ï¿½
+                newchar.changeSkillLevel(SkillFactory.getSkill(20021110), (byte) 1, (byte) 1); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½àº¹
+                newchar.changeSkillLevel(SkillFactory.getSkill(20020111), (byte) 1, (byte) 1); // ï¿½ï¿½Å¸ï¿½Ï¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+                newchar.changeSkillLevel(SkillFactory.getSkill(20020112), (byte) 1, (byte) 1); // ï¿½ï¿½ï¿½ï¿½ ï¿½Ú°ï¿½
                 break;
-            case Demon: //µ¥¸ó
-                newchar.changeSkillLevel(SkillFactory.getSkill(30011109), (byte) 1, (byte) 1); // µ¥ºô À®Áî
-                newchar.changeSkillLevel(SkillFactory.getSkill(30010110), (byte) 1, (byte) 1); // µ¥¸ó Á¡ÇÁ
+            case Demon: //ï¿½ï¿½ï¿½ï¿½
+                newchar.changeSkillLevel(SkillFactory.getSkill(30011109), (byte) 1, (byte) 1); // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+                newchar.changeSkillLevel(SkillFactory.getSkill(30010110), (byte) 1, (byte) 1); // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
                 break;
-            case Xenon: //Á¦³í
-                newchar.changeSkillLevel(SkillFactory.getSkill(30020232), (byte) 1, (byte) 1); // ¼­ÇÃ·¯½º ¼­ÇÃ¶óÀÌ
-                newchar.changeSkillLevel(SkillFactory.getSkill(30020233), (byte) 1, (byte) 1); // ÇÏÀÌºê¸®µå ·ÎÁ÷
-                newchar.changeSkillLevel(SkillFactory.getSkill(30020234), (byte) 1, (byte) 1); // ¸ÖÆ¼·¡ÅÍ·² I
-                newchar.changeSkillLevel(SkillFactory.getSkill(30021235), (byte) 1, (byte) 1); // ÇÁ·Î¸ä»ç ¾î½äÆ®
-                newchar.changeSkillLevel(SkillFactory.getSkill(30021236), (byte) 1, (byte) 1); // ¸ÖÆ¼ ¸ðµå ¸µÄ¿
-                newchar.changeSkillLevel(SkillFactory.getSkill(30021237), (byte) 1, (byte) 1); // ¿¡ºñ¿¡ÀÌ¼Ç ¸®¹öÆ¼
-                newchar.changeSkillLevel(SkillFactory.getSkill(30020240), (byte) 1, (byte) 1); // Ä«¸ðÇÃ¶óÁê
+            case Xenon: //ï¿½ï¿½ï¿½ï¿½
+                newchar.changeSkillLevel(SkillFactory.getSkill(30020232), (byte) 1, (byte) 1); // ï¿½ï¿½ï¿½Ã·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ã¶ï¿½ï¿½ï¿½
+                newchar.changeSkillLevel(SkillFactory.getSkill(30020233), (byte) 1, (byte) 1); // ï¿½ï¿½ï¿½Ìºê¸®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+                newchar.changeSkillLevel(SkillFactory.getSkill(30020234), (byte) 1, (byte) 1); // ï¿½ï¿½Æ¼ï¿½ï¿½ï¿½Í·ï¿½ I
+                newchar.changeSkillLevel(SkillFactory.getSkill(30021235), (byte) 1, (byte) 1); // ï¿½ï¿½ï¿½Î¸ï¿½ï¿½ ï¿½ï¿½ï¿½Æ®
+                newchar.changeSkillLevel(SkillFactory.getSkill(30021236), (byte) 1, (byte) 1); // ï¿½ï¿½Æ¼ ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¿
+                newchar.changeSkillLevel(SkillFactory.getSkill(30021237), (byte) 1, (byte) 1); // ï¿½ï¿½ï¿½ï¿½ï¿½Ì¼ï¿½ ï¿½ï¿½ï¿½ï¿½Æ¼
+                newchar.changeSkillLevel(SkillFactory.getSkill(30020240), (byte) 1, (byte) 1); // Ä«ï¿½ï¿½ï¿½Ã¶ï¿½ï¿½ï¿½
                 break;
-            case Phantom: // ÆÒÅÒ
-                newchar.changeSkillLevel(SkillFactory.getSkill(20031203), (byte) 1, (byte) 1); // ¸®ÅÏ ¿Àºê ÆÒÅÒ
-                newchar.changeSkillLevel(SkillFactory.getSkill(20030204), (byte) 1, (byte) 1); // µ¥µé¸® ÀÎ½ºÆÃÆ®
-                newchar.changeSkillLevel(SkillFactory.getSkill(20031205), (byte) 1, (byte) 1); // ÆÒÅÒ ½´¶ó¿ìµå
-                newchar.changeSkillLevel(SkillFactory.getSkill(20030206), (byte) 1, (byte) 1); // ÇÏÀÌ µ¦½ºÅÍ·¯Æ¼
-                newchar.changeSkillLevel(SkillFactory.getSkill(20031207), (byte) 1, (byte) 1); // ½ºÆ¿ ½ºÅ³
-                newchar.changeSkillLevel(SkillFactory.getSkill(20031208), (byte) 1, (byte) 1); // ½ºÅ³ ¸Å´ÏÁö¸ÕÆ®
-                newchar.changeSkillLevel(SkillFactory.getSkill(20031209), (byte) 1, (byte) 1); // ÀúÁö¸ÕÆ®
-                newchar.changeSkillLevel(SkillFactory.getSkill(20031260), (byte) 1, (byte) 1); // ÀúÁö¸ÕÆ® AUTO / MANUAL
+            case Phantom: // ï¿½ï¿½ï¿½ï¿½
+                newchar.changeSkillLevel(SkillFactory.getSkill(20031203), (byte) 1, (byte) 1); // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+                newchar.changeSkillLevel(SkillFactory.getSkill(20030204), (byte) 1, (byte) 1); // ï¿½ï¿½ï¿½é¸® ï¿½Î½ï¿½ï¿½ï¿½Æ®
+                newchar.changeSkillLevel(SkillFactory.getSkill(20031205), (byte) 1, (byte) 1); // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+                newchar.changeSkillLevel(SkillFactory.getSkill(20030206), (byte) 1, (byte) 1); // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í·ï¿½Æ¼
+                newchar.changeSkillLevel(SkillFactory.getSkill(20031207), (byte) 1, (byte) 1); // ï¿½ï¿½Æ¿ ï¿½ï¿½Å³
+                newchar.changeSkillLevel(SkillFactory.getSkill(20031208), (byte) 1, (byte) 1); // ï¿½ï¿½Å³ ï¿½Å´ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
+                newchar.changeSkillLevel(SkillFactory.getSkill(20031209), (byte) 1, (byte) 1); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
+                newchar.changeSkillLevel(SkillFactory.getSkill(20031260), (byte) 1, (byte) 1); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® AUTO / MANUAL
                 break;
-            case Mihile: // ¹ÌÇÏÀÏ
-                newchar.changeSkillLevel(SkillFactory.getSkill(50001214), (byte) 1, (byte) 1); // ºûÀÇ ¼öÈ£
+            case Mihile: // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+                newchar.changeSkillLevel(SkillFactory.getSkill(50001214), (byte) 1, (byte) 1); // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È£
                 break;
-            case Luminous: // ·ç¹Ì³Ê½º
-                newchar.changeSkillLevel(SkillFactory.getSkill(20040219), (byte) 1, (byte) 1); // ÀÌÄ÷¸®ºê¸®¾ö
-                newchar.changeSkillLevel(SkillFactory.getSkill(20040216), (byte) 1, (byte) 1); // ¼±ÆÄÀÌ¾î
-                newchar.changeSkillLevel(SkillFactory.getSkill(20040217), (byte) 1, (byte) 1); // ÀÌÅ¬¸³½º
-                newchar.changeSkillLevel(SkillFactory.getSkill(20040218), (byte) 1, (byte) 1); // ÆÛ¹Ì¿¡ÀÌÆ®
-                newchar.changeSkillLevel(SkillFactory.getSkill(20040221), (byte) 1, (byte) 1); // ÆÄ¿ö¿Àºê¶óÀÌÆ®
-                newchar.changeSkillLevel(SkillFactory.getSkill(20041222), (byte) 1, (byte) 1); // ¶óÀÌÆ® ºí¸µÅ©
+            case Luminous: // ï¿½ï¿½Ì³Ê½ï¿½
+                newchar.changeSkillLevel(SkillFactory.getSkill(20040219), (byte) 1, (byte) 1); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ê¸®ï¿½ï¿½
+                newchar.changeSkillLevel(SkillFactory.getSkill(20040216), (byte) 1, (byte) 1); // ï¿½ï¿½ï¿½ï¿½ï¿½Ì¾ï¿½
+                newchar.changeSkillLevel(SkillFactory.getSkill(20040217), (byte) 1, (byte) 1); // ï¿½ï¿½Å¬ï¿½ï¿½ï¿½ï¿½
+                newchar.changeSkillLevel(SkillFactory.getSkill(20040218), (byte) 1, (byte) 1); // ï¿½Û¹Ì¿ï¿½ï¿½ï¿½Æ®
+                newchar.changeSkillLevel(SkillFactory.getSkill(20040221), (byte) 1, (byte) 1); // ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
+                newchar.changeSkillLevel(SkillFactory.getSkill(20041222), (byte) 1, (byte) 1); // ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½Å©
                 break;
-            case Kaiser: // Ä«ÀÌÀú
-                newchar.changeSkillLevel(SkillFactory.getSkill(60001216), (byte) 1, (byte) 1); // ¸®¼ÅÇÃ ½ºÀ§Ä¡ : ¹æ¾î¸ðµå
-                newchar.changeSkillLevel(SkillFactory.getSkill(60001217), (byte) 1, (byte) 1); // ¸®¼ÅÇÃ ½ºÀ§Ä¡ : °ø°Ý¸ðµå
-                newchar.changeSkillLevel(SkillFactory.getSkill(60001218), (byte) 1, (byte) 1); // ¹ÙÆ¼ÄÃÄ¿³ØÆ®
-                newchar.changeSkillLevel(SkillFactory.getSkill(60001219), (byte) 1, (byte) 1); // ¾ÆÀÌ¾ð Àª
-                newchar.changeSkillLevel(SkillFactory.getSkill(60001220), (byte) 1, (byte) 1); // Æ®·£½ºÇÇ±Ô·¹ÀÌ¼Ç
-                newchar.changeSkillLevel(SkillFactory.getSkill(60001225), (byte) 1, (byte) 1); // Ä¿¸Çµå
+            case Kaiser: // Ä«ï¿½ï¿½ï¿½ï¿½
+                newchar.changeSkillLevel(SkillFactory.getSkill(60001216), (byte) 1, (byte) 1); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ä¡ : ï¿½ï¿½ï¿½ï¿½ï¿½
+                newchar.changeSkillLevel(SkillFactory.getSkill(60001217), (byte) 1, (byte) 1); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ä¡ : ï¿½ï¿½ï¿½Ý¸ï¿½ï¿½
+                newchar.changeSkillLevel(SkillFactory.getSkill(60001218), (byte) 1, (byte) 1); // ï¿½ï¿½Æ¼ï¿½ï¿½Ä¿ï¿½ï¿½Æ®
+                newchar.changeSkillLevel(SkillFactory.getSkill(60001219), (byte) 1, (byte) 1); // ï¿½ï¿½ï¿½Ì¾ï¿½ ï¿½ï¿½
+                newchar.changeSkillLevel(SkillFactory.getSkill(60001220), (byte) 1, (byte) 1); // Æ®ï¿½ï¿½ï¿½ï¿½ï¿½Ç±Ô·ï¿½ï¿½Ì¼ï¿½
+                newchar.changeSkillLevel(SkillFactory.getSkill(60001225), (byte) 1, (byte) 1); // Ä¿ï¿½Çµï¿½
                 break;
-            case AngelicBuster: //¿£Á©¸¯¹ö½ºÅÍ
+            case AngelicBuster: //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
                 newchar.setSecondFace(21173);
                 newchar.setSecondHair(37141);
-                newchar.changeSkillLevel(SkillFactory.getSkill(60011216), (byte) 1, (byte) 1); // ¼®¼¼¼­
-                newchar.changeSkillLevel(SkillFactory.getSkill(60011218), (byte) 1, (byte) 1); // ¸ÅÁöÄÃ ¸®ÇÁÆ®
-                newchar.changeSkillLevel(SkillFactory.getSkill(60011219), (byte) 1, (byte) 1); // ¼Ò¿ï ÄÁÆ®·¢Æ®
-                newchar.changeSkillLevel(SkillFactory.getSkill(60011220), (byte) 1, (byte) 1); // µ¥ÀÌµå¸²
-                newchar.changeSkillLevel(SkillFactory.getSkill(60011221), (byte) 1, (byte) 1); // ÄÚµð³×ÀÌÆ®
-                newchar.changeSkillLevel(SkillFactory.getSkill(60011222), (byte) 1, (byte) 1); // µå·¹½º ¾÷
+                newchar.changeSkillLevel(SkillFactory.getSkill(60011216), (byte) 1, (byte) 1); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+                newchar.changeSkillLevel(SkillFactory.getSkill(60011218), (byte) 1, (byte) 1); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ®
+                newchar.changeSkillLevel(SkillFactory.getSkill(60011219), (byte) 1, (byte) 1); // ï¿½Ò¿ï¿½ ï¿½ï¿½Æ®ï¿½ï¿½Æ®
+                newchar.changeSkillLevel(SkillFactory.getSkill(60011220), (byte) 1, (byte) 1); // ï¿½ï¿½ï¿½Ìµå¸²
+                newchar.changeSkillLevel(SkillFactory.getSkill(60011221), (byte) 1, (byte) 1); // ï¿½Úµï¿½ï¿½ï¿½ï¿½Æ®
+                newchar.changeSkillLevel(SkillFactory.getSkill(60011222), (byte) 1, (byte) 1); // ï¿½å·¹ï¿½ï¿½ ï¿½ï¿½
                 break;
-            case Zero: //Á¦·Î
+            case Zero: //ï¿½ï¿½ï¿½ï¿½
                 newchar.changeSkillLevel(SkillFactory.getSkill(100001262), (byte) 1, (byte) 1);
                 newchar.changeSkillLevel(SkillFactory.getSkill(100000282), (byte) 1, (byte) 1);
                 newchar.changeSkillLevel(SkillFactory.getSkill(100001263), (byte) 1, (byte) 1);
@@ -584,7 +583,7 @@ public class CharLoginHandler {
                 newchar.setRemainingSp(3, 0);
                 newchar.setRemainingSp(3, 1);
                 break;
-            case Kadena: //Ä«µ¥³ª
+            case Kadena: //Ä«ï¿½ï¿½ï¿½ï¿½
                 newchar.changeSkillLevel(SkillFactory.getSkill(60020218), (byte) 1, (byte) 1);
                 break;
             default:

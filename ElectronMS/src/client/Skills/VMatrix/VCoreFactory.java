@@ -218,7 +218,7 @@ public class VCoreFactory {
     }
 
     public static void LoadCore() {
-        final MapleDataProvider prov = MapleDataProviderFactory.getDataProvider(new File("Wz/Etc.wz"));
+        final MapleDataProvider prov = MapleDataProviderFactory.getDataProvider(new File("wz/Etc.wz"));
         MapleData nameData = prov.getData("VCore.img");
         try {
             for (MapleData dat : nameData) {

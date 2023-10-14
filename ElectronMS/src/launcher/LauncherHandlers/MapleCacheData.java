@@ -68,8 +68,8 @@ class LoadQuestData extends Thread {
 }
 
 /*
- * type - Àåºñ ¾ÆÀÌÅÛ 0 : ÀüÃ¼ 10 : ¹«±â 11 : ¹«±â Á¦¿Ü 20 : ¹æÆÐ 40 : ¾Ç¼¼»ç¸® 51 : Åõ±¸ 52 : »óÀÇ,
- * ÇÑ¹ú¿Ê 53 : ÇÏÀÇ 54 : Àå°© 55 : ½Å¹ß
+ * type - ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 0 : ï¿½ï¿½Ã¼ 10 : ï¿½ï¿½ï¿½ï¿½ 11 : ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ 20 : ï¿½ï¿½ï¿½ï¿½ 40 : ï¿½Ç¼ï¿½ï¿½ç¸® 51 : ï¿½ï¿½ï¿½ï¿½ 52 : ï¿½ï¿½ï¿½ï¿½,
+ * ï¿½Ñ¹ï¿½ï¿½ï¿½ 53 : ï¿½ï¿½ï¿½ï¿½ 54 : ï¿½å°© 55 : ï¿½Å¹ï¿½
  */
 class LoadItemDataThread extends Thread {
 
@@ -239,7 +239,7 @@ class LoadSkillDataThread extends Thread {
     }
 
     public static void cacheSkillData() {
-        final MapleData stringData = MapleDataProviderFactory.getDataProvider(new File("WZ/String.wz"))
+        final MapleData stringData = MapleDataProviderFactory.getDataProvider(new File("wz/String.wz"))
                 .getData("Skill.img");
         final MapleDataProvider datasource = MapleDataProviderFactory
                 .getDataProvider(MapleDataProviderFactory.fileInWZPath("Skill.wz"));

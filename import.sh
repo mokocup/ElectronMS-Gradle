@@ -1,0 +1,1 @@
+docker compose exec -T db mariadb -uroot < ./AzureSQLWithData.sql

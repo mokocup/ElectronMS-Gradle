@@ -12,8 +12,8 @@ public class GarbageDataBaseRemover {
         System.out.println("[Notice] launcher.Start Database Cleanup\r\n");
         int deletedrows = 0;
 
-        ServerConstants.Host = "localhost";
-        ServerConstants.dbHost = "jdbc:mysql://localhost:3306/kms_316?autoReconnect=true&characterEncoding=euckr&maxReconnects=100";
+        ServerConstants.Host = "db";
+        ServerConstants.dbHost = "jdbc:mysql://db:3306/kms_316?autoReconnect=true&characterEncoding=euckr&maxReconnects=100";
         ServerConstants.dbUser = "root";
         ServerConstants.dbPassword = "";
 

@@ -14,8 +14,8 @@ public class EquipRemover {
     public static int rm = 0;
     
     public static void main(String[] args) {
-            ServerConstants.Host = "localhost";
-            ServerConstants.dbHost = "jdbc:mysql://localhost:3306/kms_316?autoReconnect=true&characterEncoding=euckr&maxReconnects=100";
+            ServerConstants.Host = "db";
+            ServerConstants.dbHost = "jdbc:mysql://db:3306/kms_316?autoReconnect=true&characterEncoding=euckr&maxReconnects=100";
             ServerConstants.dbUser = "root";
             ServerConstants.dbPassword = "";
             run();

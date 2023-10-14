@@ -1,0 +1,38 @@
+version: "3.8"
+
+name: electronms
+
+services:
+  db:
+    container_name: electron-db
+    image: mariadb:latest
+    restart: on-failure:5
+    environment:
+      - MARIADB_ALLOW_EMPTY_ROOT_PASSWORD=true
+    volumes:
+      - ./data/mariadb:/var/lib/mysql
+
+  srv:
+    container_name: electron-srv
+    stop_grace_period: 10s
+    build:
+      context: ./ElectronMS
+      dockerfile: Dockerfile
+      target: prod
+    ports:
+      - 8484:8484
+      - 8585-8600:8585-8600
+      - 8700:8700
+      - 9900:9900
+      - 12000:12000
+    depends_on:
+      - db
+  phpmyadmin:
+    container_name: electron-phpmyadmin
+    image: phpmyadmin
+    ports:
+      - 8080:80
+    environment:
+      - PMA_HOST=db
+    depends_on:
+      - db

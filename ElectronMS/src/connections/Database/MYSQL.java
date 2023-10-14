@@ -30,7 +30,7 @@ public class MYSQL {
 
 			// jdbc url - ssl / timezone If not set, an error occurs when connecting and
 			// added
-			String jdbcUrl = "jdbc:mariadb://localhost:3306/kms_316?autoReconnect=true&characterEncoding=euckr&maxReconnects=100&CgonnectionTimeout=30000";
+			String jdbcUrl = "jdbc:mariadb://db:3306/kms_316?autoReconnect=true&characterEncoding=euckr&maxReconnects=100&CgonnectionTimeout=30000";
 			String username = "root";
 			String password = "";
 
